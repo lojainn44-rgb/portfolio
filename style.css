@@ -1,0 +1,86 @@
+  
+body{
+background-color: #f2f2f2;
+margin: 0;
+}
+.finput{
+    width: 40%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom:5px;
+
+}
+article{background-color: white;
+    text-align: center;
+    padding: 50px;
+      border-radius: 10px;
+      width: 400px; 
+    margin: 20px auto; 
+    border: 3px solid #ccc;
+}
+
+.container{
+   margin-left: 20px;
+   padding: 20px;
+}
+#submit-btn{
+    background-color: #1b7053;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    
+
+}
+/* تنسيق  اختيار اللون */
+.color-input {
+    width: 40px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 2px;
+    background-color: #fff;
+    margin: 5px auto;
+  
+}
+
+/* تنسيق  رفع الملفات */
+.file-input {
+    font-size: 14px;
+    color: #555;
+    margin: 10px auto;
+    display: block;
+}
+
+.nav {
+    background-color: #9d9898;
+    display: flex;
+    justify-content: space-between;
+   padding: 10px 50px;
+    list-style-type: none;   
+   
+}
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px ;
+}
+.nav-list li{
+    margin: 0 10px;
+    padding: 5px;
+}
+
+.img-container{
+  display:block;
+}
+.nav-logo{
+ width: 150px; /* يمكنك تعديل هذا الرقم (مثل 100px أو 200px) حسب الحجم الذي تناسب تصميمك */
+  height: auto;
+}
+a{
+    text-decoration: none;
+    color: rgb(245, 243, 243);
+}
