@@ -1,0 +1,577 @@
+body {
+    background-color: #F4EBE1; 
+    color: #4A1521;
+    line-height: 1.6;
+}
+/*  done*/
+
+/* ( Navbar) */
+.navbar {
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    margin-bottom: 32px;
+}
+/*  done*/
+
+
+.nav-container {
+    background-color: #4A1521; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* الصورة تأخذ عرض الحاوية بالكامل */
+    max-width: 800px;
+    padding: 10px 19px;
+    border-radius: 50px; 
+    /* box-shadow: [إزاحة أفقية 0] [إزاحة للأسفل 8px] [نعومة الظل 20px] [لون عنابي شفاف 15%] */
+    box-shadow: 0 8px 20px rgba(74, 21, 33, 0.15);
+}
+/*  done*/
+
+
+/* أيقونة الهوم والأيقونات */
+.nav-home-icon {
+    background: transparent; /* خلفية شفافة */
+    border: none;
+    color: #F4EBE1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* يتحول مؤشر الماوس إلى شكل اليد عند التمرير */
+    text-decoration: none; /* إزالة الخط السفلي الافتراضي من جميع الروابط */
+    padding: 6px;
+}
+/*  done*/
+
+.nav-home-icon:hover {
+    color: #D8A798; 
+    transform: scale(1.1); /* اختياري: يكبر الأيقونة بنسبة 10% بنعومة */
+}
+/*  done*/
+
+/* التحكم في حجم وسمك أيقونة home SVG */
+.nav-home-icon svg {
+    width: 18px;          /* العرض */
+    height: 18px;         /* الارتفاع */
+    stroke-width: 2px;    /* سمك خط الرسمة */
+}
+/*  done*/
+
+/* روابط الناف بار */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28.8px;
+    margin: 0;
+    padding: 0;
+}
+/*  done*/
+
+.nav-links a {
+    color: #F4EBE1;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500; /* يخلي النص بارز شوية عن العادي) ) */
+    transition: color 0.3s ease;/*  ينعم تغيير اللون عند تمرير الماوس بالتدريج خلال 0.3 ثانية */
+}
+/*  done*/
+.nav-links a:hover {
+    color: #D8A798;
+  
+}
+/*  done*/
+
+/* 4. الحاوية الرئيسية وتنسيق الأقسام */
+.main-content {
+    padding: 0 1rem;
+}
+
+.section {
+    padding: 1.5rem 0;
+    max-width: 800px;
+    margin: auto;
+    scroll-margin-top: 100px; /* [تعديل 1]: يمنع اختفاء رأس السكشن تحت الـ Navbar عند الضغط على الروابط */
+}
+/*  done*/
+
+/* 5. تصميم البطاقات  (Cards) */
+.card {
+    background-color: #EFE3D3; 
+    color: #4A1521;
+    padding: 2.5rem;
+    border-radius: 28px;       
+    text-align: center;
+    border: 1px solid rgba(74, 21, 33, 0.05);
+    box-shadow: 0 10px 25px rgba(74, 21, 33, 0.04);
+}
+
+/*  done*/
+
+.card h1, .card h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #4A1521;
+}
+/*  done*/
+
+.card p {
+    color: #553D43;
+    font-size: 1rem;
+}
+/*  done*/
+
+/* 6. تنسيق الأزرار (Buttons) */
+.btn {
+    display: inline-block; /* يخلي العنصر جنب العناصر الثانية بنسق واحد، وفي نفس الوقت يسمح لك تتحكم بـ الطول والعرض والمسافات */
+    margin-top: 1.2rem;
+    padding: 0.7rem 1.8rem;
+    background-color: #4A1521;
+    color: #F4EBE1;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+/*  done*/
+
+.btn:hover {
+    background-color: #A3485E;
+    transform: translateY(-2px);/* يرفع العنصر لفوق بمقدار 2 بكسل عند التفاعل معه */
+}
+/*  done*/
+
+/* 7.(Statistics Grid) */
+.stats {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: space-between;
+}
+/*  done*/
+
+.stat-box {
+    flex: 1;
+    padding: 1.8rem 1rem;
+    transition: transform 0.3s ease; /* [تعديل 2]: إضافة تنعيم للحركة عند Hover */
+}
+
+/* [تعديل 2]: تفاعل بسيط عند التمرير على كروت الإحصائيات */
+.stat-box:hover {
+    transform: translateY(-4px);
+}
+/*  done*/
+
+.stat-box h3 {
+    font-size: 2.2rem;
+    color: #4A1521;
+    font-weight: 800;
+}
+/*  done*/
+
+.stat-box p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.3rem; /*  مسافة خارجية علوية صغيرة تدفع العنصر لأسفل */
+    color: #6A3A43; /* [تعديل 3]: غمّقنا اللون قليلاً لتحسين التباين والقراءة (Accessibility) */
+    font-weight: 600;
+}
+/*  done*/
+
+
+
+
+
+
+
+/* الفوتر الكامل بخلفية عنابية */
+.site-footer {
+    background-color: #4A1521;  
+    color: #EFE3D3;          
+    margin-top: 30px;
+}
+/*  done*/
+
+/* قسم Contact العلوي (تم تصغير المسافات والخطوط) */
+.footer-contact {
+    padding: 18px 25px 12px 25px; /* تصغير المسافة الداخلية */
+    text-align: left;
+}
+/*  done*/
+
+.footer-contact h3 {
+    font-size: 13px;            /* تصغير حجم العنوان */
+    font-weight: 600;
+    margin-bottom: 8px;         /* تقليل المسافة أسفل العنوان */
+    color: #EFE3D3;
+}
+/*  done*/
+
+.contact-info {
+    display: flex;
+    flex-direction: column;/*  يرتب العناصر داخل الفليكس بشكل عمودي فوق بعض بدل ما تكون جنب بعض */
+    gap: 6px;
+}
+/*  done*/
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #EFE3D3;
+    text-decoration: none;
+    font-size: 12px;            /* تصغير خط الإيميل */
+    transition: opacity 0.2s;/* opacity -> يحدد درجة شفافية العنصر (من 0 خفي تماماً إلى 1 واضح بالكامل) */
+}
+
+/*  done*/
+
+.contact-item:hover {
+    opacity: 0.8; /*  يقلل شفافية العنصر لـ 80% عند تمرير الماوس لتوضيح التفاعل */
+}
+/*  done*/
+
+
+.copyright-bottom {
+    border-top: 1px solid rgba(239, 227, 211, 0.15); /*خط فاصل*/
+    padding: 6px 10px;          /* ارتفاع نحيف جداً */
+    text-align: center;
+    font-size: 11px;            /* خط حقوق الملكية أصغر */
+}
+/*  done*/
+
+.copyright-bottom p {
+    margin: 0;
+    color: #EFE3D3;
+}
+/*  done*/
+
+/* قسم المشاريع */
+.projects-section {
+    padding: 40px 20px;
+    text-align: center;
+    scroll-margin-top: 100px; /* [تعديل 1]: لضمان عدم اختفاء عنوان السكشن تحت الناف بار */
+}
+
+/*  done*/
+
+.section-title {
+    color: #4A1521;             
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/*  done*/
+
+/*  الكروت التفاعلية */
+.projects-grid {
+    display: grid;/*  يحول العنصر إلى شبكة متكاملة لتنظيم وتوزيع العناصر الداخلية لصفوف وأعمدة بكل سهولة */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/*  done*/
+
+/* الكرت الخارجي العنابي */
+.project-card {
+    background-color: #4A1521;
+    border-radius: 18px;
+    padding: 12px;
+    display: flex;/* يحول العنصر إلى فليكس للتحكم بتوزيع عناصره الداخلية بسهولة */
+    flex-direction: column; /* تحويل اتجاه العناصر الداخلي لتصبح مرتبة فوق بعضها بشكل عمودي بدلاً من كونها بجانب بعض */
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(74, 21, 33, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ينعم حركة الرفع وتغير الظل معاً عند تمرير الماوس بالتدريج خلال 0.3 ثانية */
+}
+/*  done*/ 
+
+/* رفع الكرت بقيمة بسيطة عند التمرير عليه */
+.project-card:hover {
+    transform: translateY(-5px); /* يرفع الكارت لأعلى بمقدار 5px عند تمرير الماوس */
+    box-shadow: 0 12px 25px rgba(74, 21, 33, 0.25);
+}
+/*  done*/ 
+/* إطار الصورة البيج الداخلي */
+.project-inner {
+    background-color: #EFE3D3; 
+    border-radius: 12px;
+    overflow: hidden;           /* لضمان عدم خروج الصورة عند التكبير */
+    height: 210px;              
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*  done*/ 
+
+/* تنسيق الصوره */
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* يضبط كل الصور بنفس المقاس دون مطّ أو تشويه */
+    object-position: center;    /* تركيز الصورة في المنتصف */
+    transition: transform 0.4s ease; /* حركة تكبير ناعمة */
+}
+/*  done*/ 
+
+/* تكبير ناعم للصورة عند مرور الماوس */
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+/*  done*/ 
+
+/* أزرار البروجك  */
+.project-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 8px;
+}
+/*  done*/ 
+
+.project-btn {
+    background-color: #FFFFFF;  /* زر أبيض  */
+    color: #4A1521;             /* نص عنابي */
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s, opacity 0.2s; /* [تعديل 4]: تنعيم التكبير للأزرار */
+}
+/*  done*/ 
+
+.project-btn:hover {
+    background-color: #EFE3D3;
+    transform: translateY(-1px); /* [تعديل 4]: رفع خفيف للزر عند الهوفر */
+}
+/*  done*/ 
+
+
+/*  View Project  */
+.main-btn {
+    flex: 1;
+    padding: 8px 12px;
+}
+
+
+/*  الديسكربشن للبروجكت*/ 
+.project-info {
+    padding: 8px 12px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+/*  done*/ 
+
+.project-info h3 {
+    color: #EFE3D3 !important; 
+    font-size: 14px;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+/*  done*/ 
+
+.project-info p {
+    color: #EFE3D3 !important; 
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+/*  done*/ 
+
+/* --- قسم الشهادات --- */
+.certificates-section {
+    padding: 50px 20px;
+    scroll-margin-top: 100px; /* [تعديل 1]: لمنع تداخل الناف بار */
+}
+/*  done*/ 
+
+/* --- الترتيب للشهادات--- */
+.certs-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/*  done*/ 
+
+
+.cert-mini-card {
+    background-color: #f1e5d9; 
+    border: 1px solid #e2d2c1;     
+    border-radius: 20px;             
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);/* (الحالة العادية): يضيف ظلاً خفيفاً وناعماً جداً أسفل الكارت لإعطائه عمقاً بسيطاً وهو ساكن */
+}
+/*  done*/ 
+
+.cert-mini-card:hover {
+    transform: translateY(-3px);
+    border-color: #3f141a;            /* إبراز الحدود باللون العنابي عند التمرير */
+    box-shadow: 0 6px 18px rgba(63, 20, 26, 0.08);/*يزيد من حجم وعمق الظل باللون العنابي عند تمرير الماوس ليعطي إحساساً بارتفاع الكارت */
+}
+/*  done*/ 
+
+/* أيقونة الملف*/
+.cert-mini-icon {
+    color: #3f141a;                   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*  done*/
+
+/* نصوص الشهادة */
+.cert-mini-info {
+    flex: 1;
+}
+/*  done*/
+
+.cert-mini-info h3 {
+    margin: 0 0 3px 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #3f141a;                   
+    line-height: 1.25;
+}
+/*  done*/
+
+.cert-mini-info p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #5c4a42;                   
+}
+/*  done*/
+
+/* سهم فتح الملف */
+
+/*  done*/
+
+.cert-mini-card:hover  {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+/*  done*/
+
+/* تنسيق إشعار الترحيب */
+.welcome-toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #3f141a; /* [تعديل 5]: تصحيح الخطأ البرمجي بفرز رمز الـ # المفقود */
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+/*  done*/
+
+
+/* الحاوية الرئيسية للسكشن */
+.skills-section {
+  padding: 30px 15px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* توزيع العمودين جنب بعض */
+.skills-dual-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* تقسيم الصفحة لنصفين متساويين */
+  gap: 30px;
+}
+
+/* عناوين الأقسام الفرعية */
+.group-title {
+  font-size: 1.1rem;
+  color: #4A1521;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(67, 23, 30, 0.15);
+  padding-bottom: 6px;
+}
+
+/* شبكة صغيرة داخل كل عمود */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 10px;
+}
+
+/* تصميم الكارت مصغر وبدون خلفية */
+.skill-card {
+  background: transparent;
+  border: none;
+  padding: 6px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+}
+
+/* الأيقونات صغيرة جداً وبدون مربع خلفية */
+.icon-box {
+  width: auto;
+  height: auto;
+  background: transparent !important;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+/* ألوان الأيقونات التقنية */
+.icon-box.html    { color: #e34f26; }
+.icon-box.css     { color: #1572b6; }
+.icon-box.js      { color: #f7df1e; }
+.icon-box.figma   { color: #a259ff; }
+.icon-box.powerbi { color: #f2c811; }
+.icon-box.excel   { color: #1d6f42; }
+.icon-box.sql     { color: #336791; }
+
+/* لون أيقونات الـ Soft Skills (لون يناسب الهوية) */
+.icon-box.soft    { color: #6b3e47; }
+
+/* اسم المهارة بحجم ملموم */
+.skill-name {
+  font-size: 0.75rem;
+  color: #501222;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* تجاوب الشاشة للجوال (يصبح كل قسم تحت الآخر تلقائياً في الشاشات الصغيرة) */
+@media (max-width: 600px) {
+  .skills-dual-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
